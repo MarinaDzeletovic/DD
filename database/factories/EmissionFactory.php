@@ -14,7 +14,9 @@ class EmissionFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'channel_id' => $this->faker->numberBetween(1, 10),
+            'start' => $this->faker->dateTime(),
+            'show_id' => $this->faker->numberBetween(1, 10)
         ];
     }
 }

@@ -14,7 +14,8 @@ class ChannelFactory extends Factory
     public function definition()
     {
         return [
-            //
+            'name' => $this->faker->catchPhrase,
+            'channel_number' => $this->faker->unique()->numberBetween(1, 100)
         ];
     }
 }

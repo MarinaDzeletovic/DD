@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\Show;
 use Illuminate\Database\Seeder;
 
 class ShowSeeder extends Seeder
@@ -13,6 +14,6 @@ class ShowSeeder extends Seeder
      */
     public function run()
     {
-        //
+        Show::factory(10)->create();
     }
 }
