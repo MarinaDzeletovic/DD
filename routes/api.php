@@ -1,7 +1,7 @@
 <?php
 
 use App\Http\Controllers\ChannelController;
-use Illuminate\Http\Request;
+use App\Http\Controllers\LoginController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,4 +15,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+Route::post('login', [LoginController::class, 'login']);
+Route::post('register', [LoginController::class, 'register']);
+
+
 Route::middleware('auth:sanctum')->apiResource('channels', ChannelController::class);
+Route::middleware('auth:sanctum')->post('logout', [LoginController::class, 'logout']);
