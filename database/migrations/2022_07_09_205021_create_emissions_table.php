@@ -18,7 +18,7 @@ class CreateEmissionsTable extends Migration
             $table->timestamps();
             $table->foreignId('channel_id')->constrained();
             $table->foreignId('show_id')->constrained();
-            $table->date('start');
+            $table->dateTime('start');
         });
     }
 

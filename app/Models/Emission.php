@@ -10,6 +10,7 @@ class Emission extends Model
     use HasFactory;
 
     protected $fillable = ['channel_id', 'start', 'show_id'];
+    protected $with = ['show'];
 
     public function show()
     {
